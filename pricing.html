@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Plumbing Care – Free Pricing</title>
+
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Simple, Free Home Plumbing Management. 100% Free with no subscription fees, no paid plans, and no hidden charges. Use checklists, leak tracking, reminders, and repair history at zero cost.">
+  <meta name="keywords" content="plumbing care pricing, free plumbing planner, free leak tracker, home plumbing maintenance free">
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Home Plumbing Care – Free Pricing">
+  <meta property="og:description" content="Simple, Free Home Plumbing Management. 100% Free – No Payment Required.">
+  <meta property="og:image" content="favicon.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Google Fonts Preconnect & Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Main App Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Dedicated Pricing Page Custom Enhancements (Keeps styles.css untouched) -->
+  <style>
+    .pricing-hero {
+      text-align: center;
+      padding: 3rem 1rem 2.5rem;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .pricing-free-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #ecfdf5;
+      color: #047857;
+      border: 1px solid #a7f3d0;
+      padding: 0.45rem 1.15rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      margin-bottom: 1.25rem;
+      box-shadow: var(--shadow-xs);
+    }
+
+    .pricing-free-badge svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .pricing-main-headline {
+      font-size: 2.35rem;
+      font-weight: 800;
+      color: var(--color-navy-900);
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+      margin-bottom: 0.85rem;
+    }
+
+    .pricing-subheadline {
+      font-size: 1.1rem;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      max-width: 660px;
+      margin: 0 auto 1.5rem;
+    }
+
+    /* Core 4 Guarantees Row */
+    .guarantees-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .guarantee-card {
+      background: #ffffff;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1rem;
+      text-align: center;
+      box-shadow: var(--shadow-xs);
+      transition: all var(--transition-fast);
+    }
+
+    .guarantee-card:hover {
+      border-color: var(--color-primary-border);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .guarantee-icon-wrap {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #eff6ff;
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 0.75rem;
+    }
+
+    .guarantee-icon-wrap svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .guarantee-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-navy-900);
+      margin-bottom: 0.25rem;
+    }
+
+    .guarantee-desc {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      line-height: 1.4;
+    }
+
+    /* Single Dedicated Master Free Card */
+    .master-pricing-card {
+      background: #ffffff;
+      border: 2px solid var(--color-primary);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem 2rem;
+      max-width: 780px;
+      margin: 0 auto 2.75rem;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .master-card-ribbon {
+      position: absolute;
+      top: 18px;
+      right: -32px;
+      background: var(--color-primary);
+      color: #ffffff;
+      padding: 4px 40px;
+      font-size: 0.725rem;
+      font-weight: 700;
+      transform: rotate(45deg);
+      box-shadow: var(--shadow-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .master-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+
+    .plan-title-area h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--color-navy-900);
+      margin-bottom: 0.25rem;
+    }
+
+    .plan-title-area p {
+      font-size: 0.925rem;
+      color: var(--color-text-muted);
+    }
+
+    .price-display-area {
+      text-align: right;
+    }
+
+    .price-huge {
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--color-navy-900);
+      line-height: 1;
+    }
+
+    .price-period {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--color-success-dark);
+      margin-top: 0.25rem;
+    }
+
+    /* Included Features Checklist */
+    .features-section-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--color-navy-800);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin: 1.75rem 0 1.25rem;
+    }
+
+    .included-features-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.925rem;
+      color: var(--color-navy-900);
+      line-height: 1.45;
+    }
+
+    .feature-check-icon {
+      width: 20px;
+      height: 20px;
+      color: var(--color-success);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .feature-item strong {
+      display: block;
+      color: var(--color-navy-900);
+      font-weight: 600;
+    }
+
+    .feature-item span {
+      font-size: 0.825rem;
+      color: var(--color-text-muted);
+      display: block;
+    }
+
+    /* Action Buttons Area */
+    .pricing-cta-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--color-border);
+    }
+
+    /* FAQ section */
+    .pricing-faq-section {
+      max-width: 780px;
+      margin: 0 auto 3rem;
+    }
+
+    .faq-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--color-navy-900);
+      margin-bottom: 1.25rem;
+      text-align: center;
+    }
+
+    .faq-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .faq-card {
+      background: #ffffff;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.5rem;
+    }
+
+    .faq-question {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-navy-900);
+      margin-bottom: 0.35rem;
+    }
+
+    .faq-answer {
+      font-size: 0.875rem;
+      color: var(--color-navy-700);
+      line-height: 1.55;
+    }
+
+    @media (max-width: 640px) {
+      .pricing-main-headline {
+        font-size: 1.85rem;
+      }
+      .master-pricing-card {
+        padding: 1.5rem 1.25rem;
+      }
+      .master-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .price-display-area {
+        text-align: left;
+      }
+      .pricing-cta-row .btn {
+        width: 100%;
+      }
+      .included-features-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- App Header -->
+  <header class="app-header" role="banner">
+    <div class="header-container">
+      <a href="index.html" class="brand" aria-label="Home Plumbing Care Home">
+        <div class="logo-wrapper">
+          <svg class="brand-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#1e3a8a"/>
+            <path d="M32 10 C32 10, 16 26, 16 38 C16 46.84 23.16 54 32 54 C40.84 54 48 46.84 48 38 C48 26 32 10 32 10 Z" fill="#38bdf8"/>
+            <path d="M23 35 C23 30 26 25 31 19 C28 23 26 28 26 33 C26 35 27 37 28 39 C25 37 23 35 23 35 Z" fill="#ffffff" opacity="0.4"/>
+            <path d="M37 31 L34 28 C33.4 27.4 32.6 27 31.7 27 C30.2 27 29 27.8 28.4 29 L26.2 28 C25.8 27.6 25.2 27.6 24.8 28 L23 29.8 C22.6 30.2 22.6 30.8 23 31.2 L25 32.4 C24.2 33 23.5 34.1 23.5 35.3 C23.5 37.3 25.2 39 27.2 39 C28.4 39 29.5 38.3 30.1 37.5 L35 42.4 C35.4 42.8 36 43 36.6 43 C37.8 43 38.8 42 38.8 40.8 C38.8 40.2 38.6 39.6 38.2 39.2 L33.2 34.2 C34 33.6 34.7 32.5 34.7 31.3 C34.7 30.5 34.4 29.8 34 29.2 L37 31 Z" fill="#0f172a"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">Home Plumbing Care</span>
+          <span class="brand-badge">Free Pricing Plan</span>
+        </div>
+      </a>
+
+      <!-- Header Action Controls -->
+      <div class="header-actions">
+        <a href="index.html" class="btn btn-outline btn-sm" aria-label="Return to Main Dashboard">
+          <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+          </svg>
+          <span>Back to Home</span>
+        </a>
+        <a href="index.html" class="btn btn-primary btn-sm" aria-label="Open Plumbing Planner Application">
+          <span>Open App &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Pricing Page Content -->
+  <main class="app-main-content">
+
+    <!-- Hero Section -->
+    <section class="pricing-hero">
+      <div class="pricing-free-badge">
+        <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <span>100% Free – No Payment Required</span>
+      </div>
+
+      <h1 class="pricing-main-headline">Simple, Free Home Plumbing Management</h1>
+      <p class="pricing-subheadline">
+        Home Plumbing Care is built as an open, genuinely free utility for every homeowner. Organize routine checks, document water leaks, and keep repair records without subscriptions, paywalls, or fees.
+      </p>
+    </section>
+
+    <!-- 4 Core Free Guarantees -->
+    <div class="guarantees-grid">
+      <div class="guarantee-card">
+        <div class="guarantee-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h4 class="guarantee-title">Completely Free</h4>
+        <p class="guarantee-desc">Zero purchase cost. Accessible to any homeowner, landlord, or tenant at any time.</p>
+      </div>
+
+      <div class="guarantee-card">
+        <div class="guarantee-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/>
+          </svg>
+        </div>
+        <h4 class="guarantee-title">No Subscription Fees</h4>
+        <p class="guarantee-desc">No monthly charges, annual renewals, or recurring billings ever.</p>
+      </div>
+
+      <div class="guarantee-card">
+        <div class="guarantee-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+        </div>
+        <h4 class="guarantee-title">No Paid Plans</h4>
+        <p class="guarantee-desc">We do not lock tools behind "Pro" or "Premium" tiers. Every tool is unlocked for everyone.</p>
+      </div>
+
+      <div class="guarantee-card">
+        <div class="guarantee-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+          </svg>
+        </div>
+        <h4 class="guarantee-title">No Hidden Charges</h4>
+        <p class="guarantee-desc">No credit card required, no trial periods, and zero payment processing gateways.</p>
+      </div>
+    </div>
+
+    <!-- Master Free Plan Card -->
+    <div class="master-pricing-card">
+      <div class="master-card-ribbon">100% Free</div>
+
+      <div class="master-card-header">
+        <div class="plan-title-area">
+          <h3>Homeowner Free Plan</h3>
+          <p>Complete access to every plumbing tracking and maintenance tool.</p>
+        </div>
+        <div class="price-display-area">
+          <div class="price-huge">$0</div>
+          <div class="price-period">Free Forever &bull; No CC Needed</div>
+        </div>
+      </div>
+
+      <h4 class="features-section-title">Included Free Features:</h4>
+
+      <ul class="included-features-list">
+        <!-- Feature 1: Checklist -->
+        <li class="feature-item">
+          <svg class="feature-check-icon" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <div>
+            <strong>Home plumbing maintenance checklist</strong>
+            <span>Pre-loaded with 7 essential visual checks plus unlimited custom inspection points.</span>
+          </div>
+        </li>
+
+        <!-- Feature 2: Leak & Issue Tracking -->
+        <li class="feature-item">
+          <svg class="feature-check-icon" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <div>
+            <strong>Leak and issue tracking</strong>
+            <span>Log leaks, drips, and slow drains with severity levels, location tags, and notes.</span>
+          </div>
+        </li>
+
+        <!-- Feature 3: Maintenance Reminders -->
+        <li class="feature-item">
+          <svg class="feature-check-icon" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <div>
+            <strong>Maintenance reminders</strong>
+            <span>Schedule seasonal tasks with automated overdue and due-today indicators.</span>
+          </div>
+        </li>
+
+        <!-- Feature 4: Repair History -->
+        <li class="feature-item">
+          <svg class="feature-check-icon" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <div>
+            <strong>Repair history</strong>
+            <span>Permanent home maintenance logbook with formatted printable report capabilities.</span>
+          </div>
+        </li>
+
+        <!-- Feature 5: Home Plumbing Tips and Resources -->
+        <li class="feature-item">
+          <svg class="feature-check-icon" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <div>
+            <strong>Home plumbing tips and resources</strong>
+            <span>Practical DIY precautions, main shutoff guidance, and professional recommendations.</span>
+          </div>
+        </li>
+
+        <!-- Feature 6: Privacy & LocalStorage -->
+        <li class="feature-item">
+          <svg class="feature-check-icon" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <div>
+            <strong>100% Client-Side Privacy</strong>
+            <span>All records stay inside your browser's LocalStorage. Complete data export/import included.</span>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Action Buttons Row -->
+      <div class="pricing-cta-row">
+        <a href="index.html" class="btn btn-primary btn-large">
+          <span>Start Using Free Planner Now &rarr;</span>
+        </a>
+        <a href="index.html" class="btn btn-outline btn-large">
+          <svg class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+          </svg>
+          <span>Back to Home</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Frequently Asked Questions -->
+    <section class="pricing-faq-section">
+      <h3 class="faq-title">Frequently Asked Questions</h3>
+      
+      <div class="faq-grid">
+        <div class="faq-card">
+          <h4 class="faq-question">Why is this application completely free?</h4>
+          <p class="faq-answer">
+            Home Plumbing Care is designed as an open-source, privacy-first web utility to help homeowners organize routine checks and avoid catastrophic water damage before it happens.
+          </p>
+        </div>
+
+        <div class="faq-card">
+          <h4 class="faq-question">Will there ever be paid plans or subscription upgrades?</h4>
+          <p class="faq-answer">
+            No. There are no paid plans, no premium tiers, no subscription fees, and no feature gates. Everything you see is free and will remain free.
+          </p>
+        </div>
+
+        <div class="faq-card">
+          <h4 class="faq-question">Do I need to submit credit card information or sign up?</h4>
+          <p class="faq-answer">
+            No account creation or payment information is ever requested. The application runs directly inside your browser and saves all your data locally using your browser's LocalStorage.
+          </p>
+        </div>
+
+        <div class="faq-card">
+          <h4 class="faq-question">Can I export my data if I need to switch devices?</h4>
+          <p class="faq-answer">
+            Yes. The app includes a built-in JSON backup and restore feature under the "Data" button, letting you download and restore your records anytime for free.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- App Footer -->
+  <footer class="app-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-col brand-col">
+        <div class="brand-footer">
+          <svg class="brand-icon-sm" viewBox="0 0 64 64" fill="none">
+            <rect width="64" height="64" rx="12" fill="#1e3a8a"/>
+            <path d="M32 12 C32 12 18 26 18 36 C18 44 24 50 32 50 C40 50 46 44 46 36 C46 26 32 12 32 12 Z" fill="#38bdf8"/>
+          </svg>
+          <span class="footer-brand-title">Home Plumbing Care</span>
+        </div>
+        <p class="footer-text">
+          Home Plumbing Care is a free home plumbing maintenance planner that helps homeowners organize routine checks, document plumbing issues, and track repair history.
+        </p>
+        <p class="footer-subtext text-xs text-muted">
+          100% Free &bull; No subscription fees &bull; No paid plans
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Navigation</h4>
+        <ul class="footer-nav">
+          <li><a href="index.html">Back to Home Dashboard</a></li>
+          <li><a href="pricing.html">Pricing Plan (100% Free)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Professional Partner</h4>
+        <p class="footer-text text-sm">
+          Need professional plumbing assistance in Brownsville? Visit <a href="https://www.theplumbingbrownsville.com/" target="_blank" rel="noopener noreferrer" class="footer-link-highlight">The Plumbing Brownsville</a> for plumbing services and information.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-container">
+        <p class="disclaimer-text">
+          <strong>Disclaimer:</strong> This application is provided for informational and personal home management purposes only. It is not an alternative to professional licensed plumbing diagnosis, emergency repair, or municipal building code inspection.
+        </p>
+        <p class="copyright-text">
+          &copy; 2026 Home Plumbing Care. Open-source homeowner tool.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
